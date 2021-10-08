@@ -1,0 +1,1 @@
+Some Jenkins libs that can be used other pipelines
