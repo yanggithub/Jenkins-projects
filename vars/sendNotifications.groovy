@@ -33,14 +33,14 @@ def call(String buildStatus = 'STARTED') {
   office365ConnectorSend (
       message: "${buildStatus}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (<${env.BUILD_URL}|Open>)", 
       status: buildStatus,
-      webhookUrl: 'https://outlook.office.com/webhook/3eafa17a-162c-4802-bfb3-395058a931d1@457d5685-0467-4d05-b23b-8f817adda47c/JenkinsCI/af745ce5f748426389b179b26f54e3db/31402d68-b42a-431a-9a1e-8049c2cf02bf',
+      webhookUrl: 'your webhook url',
       color: colorCode
     )
   emailext (
       subject: subject,
       body: details,
       mimeType: 'text/html',
-      replyTo: 'donotreply@birst.com',
+      replyTo: 'donotreply@yang.com',
       recipientProviders: [culprits(), brokenBuildSuspects(), brokenTestsSuspects(), requestor(), developers()]
     )
 }
