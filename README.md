@@ -1,1 +1,1 @@
-Some Jenkins libs that can be used other pipelines
+Some Jenkins libs that can be used by other pipelines
